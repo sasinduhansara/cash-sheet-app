@@ -50,9 +50,6 @@ button.secondary{background:#e9edf2;color:#222}
     font-size:14px;
 }
 
-
-
-
 @page {
   size: A4 portrait;
   margin: 0;
@@ -61,10 +58,10 @@ button.secondary{background:#e9edf2;color:#222}
 @media print {
   html,
   body {
-    width: 210mm !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: #fff !important;
+    width: 210mm !important;
+    background: white !important;
   }
 
   header,
@@ -117,6 +114,8 @@ button.secondary{background:#e9edf2;color:#222}
   .voucher + .voucher {
     border-top: 0;
   }
+}
+
 
   .vtitle {
     display: grid;
@@ -300,7 +299,7 @@ If No. of Persons or Up/Down is left blank, it is treated as 1 for calculation b
 
 <section class="panel">
 <div class="btns">
-<button type="button" onclick="window.print()">Print / Save PDF</button>
+<button type="button" onclick="printVoucher()">Print / Save PDF</button>
 <button type="button" class="secondary" onclick="resetForm()">Clear form</button>
 </div>
 <p class="help">On a phone: tap Print / Save PDF → choose “Save as PDF” or select your printer. Use A4 paper, Portrait, and 100% scale if available.</p>
@@ -557,19 +556,30 @@ function voucherHTML() {
 }
 
 /* Recalculate immediately before printing two vouchers */
-window.addEventListener('beforeprint', () => {
+
+function printVoucher() {
     for (let r = 0; r < rowCount; r++) {
         calcRow(r);
     }
 
     updateTotal();
 
-    document.getElementById('printArea').innerHTML =
-    '<div class="print-sheet">' +
-    voucherHTML() +
-    voucherHTML() +
-    '</div>';
-});
+    const printArea = document.getElementById('printArea');
+
+    printArea.innerHTML =
+        '<div class="print-sheet">' +
+        voucherHTML() +
+        voucherHTML() +
+        '</div>';
+
+    // Let Safari finish updating the print layout.
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            window.print();
+        });
+    });
+}
+
 
 /* Clear the form */
 function resetForm() {
