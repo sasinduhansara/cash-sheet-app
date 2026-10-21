@@ -57,6 +57,7 @@ button.secondary{background:#e9edf2;color:#222}
     margin: 0 !important;
     padding: 0 !important;
     width: auto !important;
+    height: auto !important;
     background: #fff !important;
   }
   header, main, footer { display: none !important; }
@@ -68,7 +69,7 @@ button.secondary{background:#e9edf2;color:#222}
     display: block !important;
     width: 100%;
     height: auto;
-    margin: 0 0 6mm;
+    margin: 0 0 5mm;
     padding: 0;
     box-sizing: border-box;
     color: #111 !important;
@@ -79,87 +80,77 @@ button.secondary{background:#e9edf2;color:#222}
   .voucher:last-child { margin-bottom: 0; }
 }
 
-
-  .vtitle {
-    display: grid;
-    grid-template-columns: 76% 24%;
-    border: 1px solid #222;
-    font-weight: bold;
-    font-size: 10pt;
-    height: 6mm;
-    align-items: center;
-  }
-
-  .vtitle div { padding: 0 1mm; }
-
-  .customer {
-    border: 1px solid #222;
-    border-top: 0;
-    height: 8mm;
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 1mm;
-  }
-
-  .customer span { font-weight: normal; }
-
-  .printtable {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    font-size: 7.3pt;
-  }
-
-  .printtable th,
-  .printtable td {
-    border: 1px solid #333;
-    padding: 0.5mm;
-    text-align: center;
-    overflow-wrap: anywhere;
-  }
-
-  .printtable th {
-    height: 15mm;
-    background: #d9ddd2 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-    font-weight: normal;
-  }
-
-  .printtable td { height: 5mm; }
-
-  .totalrow {
-    border: 1px solid #222;
-    border-top: 0;
-    height: 5mm;
-    font-weight: bold;
-    font-size: 9pt;
-    padding: 0.5mm;
-  }
-
-  .signature {
-    border: 1px solid #222;
-    border-top: 0;
-    height: 10mm;
-    font-weight: bold;
-    font-size: 9pt;
-    padding: 1mm;
-  }
-
-  .signature.supervisor { height: 9mm; }
-  .signature.hod { height: 9mm; }
-
-  .notes {
-    border: 1px solid #222;
-    border-top: 0;
-    height: 12mm;
-    padding: 1mm;
-    font-size: 8pt;
-    line-height: 1.15;
-    font-weight: bold;
-  }
+.vtitle {
+  display: grid;
+  grid-template-columns: 76% 24%;
+  border: 1px solid #222;
+  font-weight: bold;
+  font-size: 9.5pt;
+  height: 6mm;
+  align-items: center;
 }
+.vtitle div { padding: 0 1mm; }
 
+.customer {
+  border: 1px solid #222;
+  border-top: 0;
+  height: 7mm;
+  font-size: 9.5pt;
+  font-weight: bold;
+  padding: 1mm;
+}
+.customer span { font-weight: normal; }
+
+.printtable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 7pt;
+}
+.printtable th,
+.printtable td {
+  border: 1px solid #333;
+  padding: 0.4mm;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.printtable th {
+  height: 12mm;
+  background: #d9ddd2 !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  font-weight: normal;
+}
+.printtable td { height: 4.6mm; }
+
+.totalrow {
+  border: 1px solid #222;
+  border-top: 0;
+  height: 5mm;
+  font-weight: bold;
+  font-size: 9pt;
+  padding: 0.5mm 1mm;
+}
+.signature {
+  border: 1px solid #222;
+  border-top: 0;
+  height: 8mm;
+  font-weight: bold;
+  font-size: 8.5pt;
+  padding: 1mm;
+}
+.signature.supervisor,
+.signature.hod { height: 7mm; }
+
+.notes {
+  border: 1px solid #222;
+  border-top: 0;
+  height: 11mm;
+  padding: 1mm;
+  font-size: 7.5pt;
+  line-height: 1.15;
+  font-weight: bold;
+}
 
 footer {
     max-width: 900px;
