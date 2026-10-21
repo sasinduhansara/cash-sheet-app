@@ -69,7 +69,7 @@ button.secondary{background:#e9edf2;color:#222}
     display: block !important;
     width: 100%;
     height: auto;
-    margin: 0 0 5mm;
+    margin: 0 0 3mm;
     padding: 0;
     box-sizing: border-box;
     color: #111 !important;
@@ -121,7 +121,7 @@ button.secondary{background:#e9edf2;color:#222}
   print-color-adjust: exact;
   font-weight: normal;
 }
-.printtable td { height: 4.6mm; }
+.printtable td { height: 4.2mm; }
 
 .totalrow {
   border: 1px solid #222;
@@ -134,21 +134,21 @@ button.secondary{background:#e9edf2;color:#222}
 .signature {
   border: 1px solid #222;
   border-top: 0;
-  height: 8mm;
+  height: 7mm;
   font-weight: bold;
   font-size: 8.5pt;
   padding: 1mm;
 }
 .signature.supervisor,
-.signature.hod { height: 7mm; }
+.signature.hod { height: 6mm; }
 
 .notes {
   border: 1px solid #222;
   border-top: 0;
-  height: 11mm;
-  padding: 1mm;
-  font-size: 7.5pt;
-  line-height: 1.15;
+  height: 10mm;
+  padding: 0.8mm 1mm;
+  font-size: 7pt;
+  line-height: 1.1;
   font-weight: bold;
 }
 
@@ -488,7 +488,7 @@ function voucherHTML() {
     </div>
 
     <div class="signature">
-        Name and signature of the employee: ${esc(employee)}<br><br>
+        Name and signature of the employee: ${esc(employee)}
     </div>
 
     <div class="signature supervisor">
